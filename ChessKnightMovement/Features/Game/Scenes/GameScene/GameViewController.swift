@@ -12,13 +12,18 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak private var collectionView: UICollectionView!
 
-    private var startingSquare: ChessBoardSquare?
-    private var finnishingSquare: ChessBoardSquare?
+    enum GameState {
+        case nothingSelected
+        case selectedStartingSquare(ChessBoardSquare)
+        case selectedStartingAndFinnishSquare(ChessBoardSquare, ChessBoardSquare)
+    }
+
+    private var gameState: GameState = .nothingSelected
 
     // MARK: - Private methods
 
     private func startNewGame() {
-        guard let startingSquare = startingSquare, let finishingSquare = finnishingSquare else { return }
+        guard case let .selectedStartingAndFinnishSquare(startingSquare, finishingSquare) = gameState else { return }
 
         let game = MovementGame(startingSquare: startingSquare, finnishingSquare: finishingSquare,
                                 chessPiece: Knight(), maximumMovesAllowed: 3)
@@ -53,7 +58,7 @@ class GameViewController: UIViewController {
     }
 
     private func clearBoard() {
-        guard let startingSquare = startingSquare, let finishingSquare = finnishingSquare else { return }
+        guard case let .selectedStartingAndFinnishSquare(startingSquare, finishingSquare) = gameState else { return }
 
         let cellStartingSquare = collectionView.cellForItem(at: startingSquare.toIndexPath()) as? ChessBoardSquareCollectionViewCell
         let cellFinnishingSquare = collectionView.cellForItem(at: finishingSquare.toIndexPath()) as? ChessBoardSquareCollectionViewCell
@@ -61,8 +66,12 @@ class GameViewController: UIViewController {
         cellStartingSquare?.hideSelectedView()
         cellFinnishingSquare?.hideSelectedView()
 
-        self.startingSquare = nil
-        self.finnishingSquare = nil
+        gameState = .nothingSelected
+    }
+
+    private func selectCell(atIndexPath indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? ChessBoardSquareCollectionViewCell
+        cell?.showSelectedView()
     }
 }
 
@@ -112,15 +121,16 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
 extension GameViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if startingSquare == nil {
-            startingSquare = indexPath.toChessBoardSquare()
-            let cell = collectionView.cellForItem(at: indexPath) as? ChessBoardSquareCollectionViewCell
-            cell?.showSelectedView()()
-        } else if finnishingSquare == nil {
-            finnishingSquare = indexPath.toChessBoardSquare()
-            let cell = collectionView.cellForItem(at: indexPath) as? ChessBoardSquareCollectionViewCell
-            cell?.showSelectedView()()
+        switch gameState {
+        case .nothingSelected:
+            selectCell(atIndexPath: indexPath)
+            gameState = .selectedStartingSquare(indexPath.toChessBoardSquare())
+        case let .selectedStartingSquare(startingSquare):
+            selectCell(atIndexPath: indexPath)
+            gameState = .selectedStartingAndFinnishSquare(startingSquare, indexPath.toChessBoardSquare())
             startNewGame()
+        case .selectedStartingAndFinnishSquare:
+            return
         }
     }
 }
