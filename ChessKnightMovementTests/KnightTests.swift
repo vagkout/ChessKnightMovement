@@ -11,14 +11,10 @@ import XCTest
 
 class KnightTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-    }
-
-    func test_calculateAllPossibleNextMoveSquares_WithMiddleSquare_ShouldReturn8Squares() {
+    func test_calculateAllPossibleNextMoveSquares_WithMiddleSquare_ShouldFindCorrectSquares() {
+        let middleSquare = ChessBoardSquare(row: 3, column: 3)
         let sut = Knight()
 
-        let middleSquare = ChessBoardSquare(row: 3, column: 3)
         let nextMoveSquares = sut.calculateNextMoveSquares(fromSquare: middleSquare)
 
         let expectedSquares = [ChessBoardSquare(row: 1, column: 2),
@@ -33,9 +29,9 @@ class KnightTests: XCTestCase {
     }
 
     func test_calculateAllPossibleNextMoveSquares_WithBottomLeftSquare_ShouldFilterInvalidSquares() {
+        let middleSquare = ChessBoardSquare(row: 7, column: 0)
         let sut = Knight()
 
-        let middleSquare = ChessBoardSquare(row: 7, column: 0)
         let nextMoveSquares = sut.calculateNextMoveSquares(fromSquare: middleSquare)
 
         let expectedSquares = [ChessBoardSquare(row: 5, column: 1),

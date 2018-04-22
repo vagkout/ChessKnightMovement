@@ -9,6 +9,7 @@
 import Foundation
 
 struct ChessBoardSquare {
+
     let row: Int
     let column: Int
 
@@ -30,5 +31,14 @@ extension ChessBoardSquare: Equatable {
 
     static func == (lhs: ChessBoardSquare, rhs: ChessBoardSquare) -> Bool {
         return lhs.row == rhs.row && lhs.column == rhs.column
+    }
+}
+
+// MARK: - Hashable
+
+extension ChessBoardSquare: Hashable {
+
+    var hashValue: Int {
+        return self.row ^ self.column
     }
 }

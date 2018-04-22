@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D63EF01208B2F4800CAF39C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF00208B2F4800CAF39C /* AppDelegate.swift */; };
-		0D63EF03208B2F4800CAF39C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF02208B2F4800CAF39C /* ViewController.swift */; };
-		0D63EF06208B2F4800CAF39C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D63EF04208B2F4800CAF39C /* Main.storyboard */; };
 		0D63EF08208B2F4800CAF39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D63EF07208B2F4800CAF39C /* Assets.xcassets */; };
 		0D63EF0B208B2F4800CAF39C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D63EF09208B2F4800CAF39C /* LaunchScreen.storyboard */; };
 		0D63EF32208B3EDF00CAF39C /* MovementGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF31208B3EDF00CAF39C /* MovementGame.swift */; };
@@ -18,22 +16,19 @@
 		0D63EF38208B420F00CAF39C /* KnightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF37208B420F00CAF39C /* KnightTests.swift */; };
 		0D63EF3A208B423200CAF39C /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF39208B423200CAF39C /* Knight.swift */; };
 		0D63EF3C208B4B9E00CAF39C /* ChessBoardSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF3B208B4B9E00CAF39C /* ChessBoardSquareTests.swift */; };
-		0D63EF3E208B530500CAF39C /* MovesPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF3D208B530500CAF39C /* MovesPath.swift */; };
+		0D63EF3E208B530500CAF39C /* ChessBoardSquaresPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF3D208B530500CAF39C /* ChessBoardSquaresPath.swift */; };
 		0D63EF42208B9E8000CAF39C /* MovementGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF41208B9E8000CAF39C /* MovementGameTests.swift */; };
+		0D63EF48208C7F9900CAF39C /* game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D63EF47208C7F9900CAF39C /* game.storyboard */; };
+		0D63EF4A208C80FD00CAF39C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF49208C80FD00CAF39C /* GameViewController.swift */; };
+		0D63EF4D208C8EFB00CAF39C /* ChessBoardSquareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF4C208C8EFB00CAF39C /* ChessBoardSquareCollectionViewCell.swift */; };
+		0D63EF52208C9A0500CAF39C /* IndexPath+ChessBoardSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF51208C9A0500CAF39C /* IndexPath+ChessBoardSquare.swift */; };
+		0D63EF57208D119D00CAF39C /* ChessBoardSquare+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63EF56208D119D00CAF39C /* ChessBoardSquare+IndexPath.swift */; };
 		6C73E7100F451D04B040CA07 /* Pods_ChessKnightMovement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C17D0DA26742469DF3F47F /* Pods_ChessKnightMovement.framework */; };
-		D3D080B0CE7F4D5685BCD787 /* Pods_ChessKnightMovementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF5F803DF27B57C215866A5 /* Pods_ChessKnightMovementUITests.framework */; };
 		E57713FF217876D52DCF7804 /* Pods_ChessKnightMovementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B72D25DFCBBAAADF230489 /* Pods_ChessKnightMovementTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0D63EF12208B2F4800CAF39C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0D63EEF5208B2F4800CAF39C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0D63EEFC208B2F4800CAF39C;
-			remoteInfo = ChessKnightMovement;
-		};
-		0D63EF1D208B2F4800CAF39C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0D63EEF5208B2F4800CAF39C /* Project object */;
 			proxyType = 1;
@@ -47,23 +42,24 @@
 		0742FC9A0B9CF9D602FA2307 /* Pods-ChessKnightMovementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessKnightMovementTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChessKnightMovementTests/Pods-ChessKnightMovementTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D63EEFD208B2F4800CAF39C /* ChessKnightMovement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessKnightMovement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D63EF00208B2F4800CAF39C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D63EF02208B2F4800CAF39C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D63EF05208B2F4800CAF39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D63EF07208B2F4800CAF39C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D63EF0A208B2F4800CAF39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D63EF0C208B2F4800CAF39C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D63EF11208B2F4800CAF39C /* ChessKnightMovementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessKnightMovementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D63EF17208B2F4800CAF39C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D63EF1C208B2F4800CAF39C /* ChessKnightMovementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessKnightMovementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D63EF22208B2F4800CAF39C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D63EF31208B3EDF00CAF39C /* MovementGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementGame.swift; sourceTree = "<group>"; };
 		0D63EF33208B3F3100CAF39C /* ChessBoardSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardSquare.swift; sourceTree = "<group>"; };
 		0D63EF35208B3FC200CAF39C /* ChessPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessPiece.swift; sourceTree = "<group>"; };
 		0D63EF37208B420F00CAF39C /* KnightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnightTests.swift; sourceTree = "<group>"; };
 		0D63EF39208B423200CAF39C /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
 		0D63EF3B208B4B9E00CAF39C /* ChessBoardSquareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardSquareTests.swift; sourceTree = "<group>"; };
-		0D63EF3D208B530500CAF39C /* MovesPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesPath.swift; sourceTree = "<group>"; };
+		0D63EF3D208B530500CAF39C /* ChessBoardSquaresPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardSquaresPath.swift; sourceTree = "<group>"; };
 		0D63EF41208B9E8000CAF39C /* MovementGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementGameTests.swift; sourceTree = "<group>"; };
+		0D63EF47208C7F9900CAF39C /* game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = game.storyboard; sourceTree = "<group>"; };
+		0D63EF49208C80FD00CAF39C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0D63EF4C208C8EFB00CAF39C /* ChessBoardSquareCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardSquareCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D63EF51208C9A0500CAF39C /* IndexPath+ChessBoardSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+ChessBoardSquare.swift"; sourceTree = "<group>"; };
+		0D63EF56208D119D00CAF39C /* ChessBoardSquare+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChessBoardSquare+IndexPath.swift"; sourceTree = "<group>"; };
 		1D0A72D049E1306454F1D2A0 /* Pods-ChessKnightMovementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChessKnightMovementUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChessKnightMovementUITests/Pods-ChessKnightMovementUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2FF5F803DF27B57C215866A5 /* Pods_ChessKnightMovementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChessKnightMovementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B72D25DFCBBAAADF230489 /* Pods_ChessKnightMovementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChessKnightMovementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,14 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0D63EF19208B2F4800CAF39C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3D080B0CE7F4D5685BCD787 /* Pods_ChessKnightMovementUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,7 +94,6 @@
 			children = (
 				0D63EEFF208B2F4800CAF39C /* ChessKnightMovement */,
 				0D63EF14208B2F4800CAF39C /* ChessKnightMovementTests */,
-				0D63EF1F208B2F4800CAF39C /* ChessKnightMovementUITests */,
 				0D63EEFE208B2F4800CAF39C /* Products */,
 				644D53007F4027F458EA45D2 /* Pods */,
 				675F95BEAB47B47AD228A35B /* Frameworks */,
@@ -118,7 +105,6 @@
 			children = (
 				0D63EEFD208B2F4800CAF39C /* ChessKnightMovement.app */,
 				0D63EF11208B2F4800CAF39C /* ChessKnightMovementTests.xctest */,
-				0D63EF1C208B2F4800CAF39C /* ChessKnightMovementUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,10 +112,10 @@
 		0D63EEFF208B2F4800CAF39C /* ChessKnightMovement */ = {
 			isa = PBXGroup;
 			children = (
+				0D63EF4E208C99D100CAF39C /* Extensions */,
+				0D63EF45208BED7200CAF39C /* Features */,
 				0D63EF2F208B3CCF00CAF39C /* Core */,
 				0D63EF00208B2F4800CAF39C /* AppDelegate.swift */,
-				0D63EF02208B2F4800CAF39C /* ViewController.swift */,
-				0D63EF04208B2F4800CAF39C /* Main.storyboard */,
 				0D63EF07208B2F4800CAF39C /* Assets.xcassets */,
 				0D63EF09208B2F4800CAF39C /* LaunchScreen.storyboard */,
 				0D63EF0C208B2F4800CAF39C /* Info.plist */,
@@ -148,24 +134,67 @@
 			path = ChessKnightMovementTests;
 			sourceTree = "<group>";
 		};
-		0D63EF1F208B2F4800CAF39C /* ChessKnightMovementUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0D63EF22208B2F4800CAF39C /* Info.plist */,
-			);
-			path = ChessKnightMovementUITests;
-			sourceTree = "<group>";
-		};
 		0D63EF2F208B3CCF00CAF39C /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				0D63EF31208B3EDF00CAF39C /* MovementGame.swift */,
+				0D63EF33208B3F3100CAF39C /* ChessBoardSquare.swift */,
+				0D63EF3D208B530500CAF39C /* ChessBoardSquaresPath.swift */,
 				0D63EF35208B3FC200CAF39C /* ChessPiece.swift */,
 				0D63EF39208B423200CAF39C /* Knight.swift */,
-				0D63EF33208B3F3100CAF39C /* ChessBoardSquare.swift */,
-				0D63EF3D208B530500CAF39C /* MovesPath.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0D63EF45208BED7200CAF39C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0D63EF54208CDFCE00CAF39C /* Game */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0D63EF46208BED7E00CAF39C /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				0D63EF4B208C8ECC00CAF39C /* Cells */,
+				0D63EF49208C80FD00CAF39C /* GameViewController.swift */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
+		0D63EF4B208C8ECC00CAF39C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D63EF4C208C8EFB00CAF39C /* ChessBoardSquareCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0D63EF4E208C99D100CAF39C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D63EF51208C9A0500CAF39C /* IndexPath+ChessBoardSquare.swift */,
+				0D63EF56208D119D00CAF39C /* ChessBoardSquare+IndexPath.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0D63EF53208CDFC500CAF39C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0D63EF46208BED7E00CAF39C /* GameScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0D63EF54208CDFCE00CAF39C /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0D63EF47208C7F9900CAF39C /* game.storyboard */,
+				0D63EF53208CDFC500CAF39C /* Scenes */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		644D53007F4027F458EA45D2 /* Pods */ = {
@@ -232,25 +261,6 @@
 			productReference = 0D63EF11208B2F4800CAF39C /* ChessKnightMovementTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0D63EF1B208B2F4800CAF39C /* ChessKnightMovementUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0D63EF2B208B2F4800CAF39C /* Build configuration list for PBXNativeTarget "ChessKnightMovementUITests" */;
-			buildPhases = (
-				197DD7A8BD188B955C7B6F58 /* [CP] Check Pods Manifest.lock */,
-				0D63EF18208B2F4800CAF39C /* Sources */,
-				0D63EF19208B2F4800CAF39C /* Frameworks */,
-				0D63EF1A208B2F4800CAF39C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0D63EF1E208B2F4800CAF39C /* PBXTargetDependency */,
-			);
-			name = ChessKnightMovementUITests;
-			productName = ChessKnightMovementUITests;
-			productReference = 0D63EF1C208B2F4800CAF39C /* ChessKnightMovementUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,10 +277,6 @@
 					0D63EF10208B2F4800CAF39C = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
-						TestTargetID = 0D63EEFC208B2F4800CAF39C;
-					};
-					0D63EF1B208B2F4800CAF39C = {
-						CreatedOnToolsVersion = 9.3;
 						TestTargetID = 0D63EEFC208B2F4800CAF39C;
 					};
 				};
@@ -290,7 +296,6 @@
 			targets = (
 				0D63EEFC208B2F4800CAF39C /* ChessKnightMovement */,
 				0D63EF10208B2F4800CAF39C /* ChessKnightMovementTests */,
-				0D63EF1B208B2F4800CAF39C /* ChessKnightMovementUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,20 +305,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D63EF48208C7F9900CAF39C /* game.storyboard in Resources */,
 				0D63EF0B208B2F4800CAF39C /* LaunchScreen.storyboard in Resources */,
 				0D63EF08208B2F4800CAF39C /* Assets.xcassets in Resources */,
-				0D63EF06208B2F4800CAF39C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0D63EF0F208B2F4800CAF39C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0D63EF1A208B2F4800CAF39C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,24 +333,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		197DD7A8BD188B955C7B6F58 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChessKnightMovementUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		1D1CF674688768F030A852C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -397,10 +377,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D63EF03208B2F4800CAF39C /* ViewController.swift in Sources */,
-				0D63EF3E208B530500CAF39C /* MovesPath.swift in Sources */,
+				0D63EF57208D119D00CAF39C /* ChessBoardSquare+IndexPath.swift in Sources */,
+				0D63EF3E208B530500CAF39C /* ChessBoardSquaresPath.swift in Sources */,
+				0D63EF4D208C8EFB00CAF39C /* ChessBoardSquareCollectionViewCell.swift in Sources */,
 				0D63EF32208B3EDF00CAF39C /* MovementGame.swift in Sources */,
+				0D63EF52208C9A0500CAF39C /* IndexPath+ChessBoardSquare.swift in Sources */,
 				0D63EF01208B2F4800CAF39C /* AppDelegate.swift in Sources */,
+				0D63EF4A208C80FD00CAF39C /* GameViewController.swift in Sources */,
 				0D63EF36208B3FC200CAF39C /* ChessPiece.swift in Sources */,
 				0D63EF3A208B423200CAF39C /* Knight.swift in Sources */,
 				0D63EF34208B3F3100CAF39C /* ChessBoardSquare.swift in Sources */,
@@ -417,13 +400,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0D63EF18208B2F4800CAF39C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -432,22 +408,9 @@
 			target = 0D63EEFC208B2F4800CAF39C /* ChessKnightMovement */;
 			targetProxy = 0D63EF12208B2F4800CAF39C /* PBXContainerItemProxy */;
 		};
-		0D63EF1E208B2F4800CAF39C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0D63EEFC208B2F4800CAF39C /* ChessKnightMovement */;
-			targetProxy = 0D63EF1D208B2F4800CAF39C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0D63EF04208B2F4800CAF39C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D63EF05208B2F4800CAF39C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0D63EF09208B2F4800CAF39C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -510,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -565,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -580,7 +543,9 @@
 			baseConfigurationReference = 057871F7AB0A120258769DF8 /* Pods-ChessKnightMovement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGK2DUZ4ZY;
 				INFOPLIST_FILE = ChessKnightMovement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,9 +553,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = VagelisKoutkias.ChessKnightMovement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -599,7 +565,9 @@
 			baseConfigurationReference = 932610FF25FA9259E2F090E8 /* Pods-ChessKnightMovement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGK2DUZ4ZY;
 				INFOPLIST_FILE = ChessKnightMovement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,9 +575,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = VagelisKoutkias.ChessKnightMovement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -621,6 +590,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ChessKnightMovementTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,6 +614,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ChessKnightMovementTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -655,46 +626,6 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChessKnightMovement.app/ChessKnightMovement";
-			};
-			name = Release;
-		};
-		0D63EF2C208B2F4800CAF39C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0A72D049E1306454F1D2A0 /* Pods-ChessKnightMovementUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ChessKnightMovementUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = VagelisKoutkias.ChessKnightMovementUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChessKnightMovement;
-			};
-			name = Debug;
-		};
-		0D63EF2D208B2F4800CAF39C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7226F3779BDA1D6EFD8B56B /* Pods-ChessKnightMovementUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ChessKnightMovementUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = VagelisKoutkias.ChessKnightMovementUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChessKnightMovement;
 			};
 			name = Release;
 		};
@@ -724,15 +655,6 @@
 			buildConfigurations = (
 				0D63EF29208B2F4800CAF39C /* Debug */,
 				0D63EF2A208B2F4800CAF39C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0D63EF2B208B2F4800CAF39C /* Build configuration list for PBXNativeTarget "ChessKnightMovementUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0D63EF2C208B2F4800CAF39C /* Debug */,
-				0D63EF2D208B2F4800CAF39C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

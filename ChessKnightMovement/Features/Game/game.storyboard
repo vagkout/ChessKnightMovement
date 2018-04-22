@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p2S-ku-gaC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="60v-Wm-wrL">
+            <objects>
+                <viewController id="p2S-ku-gaC" customClass="GameViewController" customModule="ChessKnightMovement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QGS-OU-qgE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNp-Xz-bQv" userLabel="Brown Background View">
+                                <rect key="frame" x="30" y="186.5" width="314" height="314"/>
+                                <color key="backgroundColor" red="0.59848344326019287" green="0.37580573558807373" blue="0.18148764967918396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PNp-Xz-bQv" secondAttribute="height" id="WN9-lE-33H"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NSH-K5-rYt" userLabel="Chessboard Collection View">
+                                <rect key="frame" x="44.5" y="200.5" width="286" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NSH-K5-rYt" secondAttribute="height" id="c0c-zV-PCQ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XxI-V5-Zvs">
+                                    <size key="itemSize" width="126" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChessBoardSquareCollectionViewCell" id="VLj-Oz-aJX" customClass="ChessBoardSquareCollectionViewCell" customModule="ChessKnightMovement" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="126" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-p5-EuI" userLabel="Selection View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="104"/>
+                                                    <color key="backgroundColor" red="0.45958000421524048" green="0.66612118482589722" blue="0.55701756477355957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knight" translatesAutoresizingMaskIntoConstraints="NO" id="H1W-h6-mrf">
+                                                    <rect key="frame" x="46.5" y="35.5" width="33" height="33"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="H1W-h6-mrf" firstAttribute="centerX" secondItem="VLj-Oz-aJX" secondAttribute="centerX" id="1Op-vs-Nrw"/>
+                                            <constraint firstItem="H1W-h6-mrf" firstAttribute="centerY" secondItem="VLj-Oz-aJX" secondAttribute="centerY" id="C1v-TD-Gyi"/>
+                                            <constraint firstItem="bPX-p5-EuI" firstAttribute="leading" secondItem="VLj-Oz-aJX" secondAttribute="leading" id="E3Y-fT-9xq"/>
+                                            <constraint firstAttribute="bottom" secondItem="bPX-p5-EuI" secondAttribute="bottom" id="ZCe-LT-Fuv"/>
+                                            <constraint firstItem="bPX-p5-EuI" firstAttribute="top" secondItem="VLj-Oz-aJX" secondAttribute="top" id="inW-pe-hE4"/>
+                                            <constraint firstAttribute="trailing" secondItem="bPX-p5-EuI" secondAttribute="trailing" id="jXe-4u-KBu"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="chessPieceImageView" destination="H1W-h6-mrf" id="i1X-G7-8ee"/>
+                                            <outlet property="selectionView" destination="bPX-p5-EuI" id="b7D-Av-5Zh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="p2S-ku-gaC" id="FOy-U6-xCu"/>
+                                    <outlet property="delegate" destination="p2S-ku-gaC" id="GG2-rO-6eG"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZPG-kX-KQJ" userLabel="Logo Stack View">
+                                <rect key="frame" x="117.5" y="40" width="140" height="126.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knight_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-dY-dHU">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="126.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="mxV-cQ-cem"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="3 moves  ahead" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjr-uK-ZSq">
+                                        <rect key="frame" x="50" y="33.5" width="90" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="3Fu-av-ylh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NSH-K5-rYt" firstAttribute="centerY" secondItem="t4R-m8-OLS" secondAttribute="centerY" id="7my-wb-e1k"/>
+                            <constraint firstItem="ZPG-kX-KQJ" firstAttribute="top" secondItem="t4R-m8-OLS" secondAttribute="top" constant="20" id="Ct5-B9-qX5"/>
+                            <constraint firstItem="PNp-Xz-bQv" firstAttribute="centerX" secondItem="NSH-K5-rYt" secondAttribute="centerX" id="JiA-Lz-NvT"/>
+                            <constraint firstItem="PNp-Xz-bQv" firstAttribute="leading" secondItem="t4R-m8-OLS" secondAttribute="leading" constant="30" id="Plf-Vc-Mx8"/>
+                            <constraint firstItem="NSH-K5-rYt" firstAttribute="centerX" secondItem="QGS-OU-qgE" secondAttribute="centerX" id="RPQ-oK-Qgc"/>
+                            <constraint firstItem="PNp-Xz-bQv" firstAttribute="height" secondItem="NSH-K5-rYt" secondAttribute="height" multiplier="1.1" id="dPw-KL-dUa"/>
+                            <constraint firstItem="ZPG-kX-KQJ" firstAttribute="centerX" secondItem="NSH-K5-rYt" secondAttribute="centerX" id="htg-73-roa"/>
+                            <constraint firstItem="PNp-Xz-bQv" firstAttribute="top" secondItem="ZPG-kX-KQJ" secondAttribute="bottom" constant="20" id="mI1-YC-sdd"/>
+                            <constraint firstItem="PNp-Xz-bQv" firstAttribute="centerY" secondItem="NSH-K5-rYt" secondAttribute="centerY" id="xmD-HB-2ED"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t4R-m8-OLS"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="NSH-K5-rYt" id="aaF-QX-FRl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQH-Hr-huK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="148.87556221889056"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="knight" width="33" height="33"/>
+        <image name="knight_logo" width="200" height="150"/>
+    </resources>
+</document>
